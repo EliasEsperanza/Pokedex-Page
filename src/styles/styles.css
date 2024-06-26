@@ -1,0 +1,263 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.BuscadosFiltro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.BuscadosFiltro input{
+    padding: 10px;
+    width: calc(100% - 200px); 
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.BuscadosFiltro input:focus{
+    border-color: #ffcc00;
+}
+.BuscadosFiltro select{
+    padding: 10px;
+    width: 200px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.BuscadosFiltro select:focus{
+    border-color: #ffcc00;
+}
+
+.pokedex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    width: 200px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.card:hover .pokemon-image{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.card-number {
+    font-size: 14px;
+    color: #888;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+
+.pokemon-image {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.pokemon-name {
+    font-size: 24px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.add-button{
+    border-radius: 5px;
+    padding: 5px 15px;
+    background: #55AD9B;
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.add-button:hover{
+    background-color: #508c80;
+}
+
+.types {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.type {
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.detail {
+    font-size: 14px;
+}
+
+.type.normal {
+    background-color: #A8A878;
+}
+
+.type.fire {
+    background-color: #F08030;
+}
+
+.type.water {
+    background-color: #6890F0;
+}
+
+.type.electric {
+    background-color: #F8D030;
+}
+
+.type.grass {
+    background-color: #78C850;
+}
+
+.type.ice {
+    background-color: #98D8D8;
+}
+
+.type.fighting {
+    background-color: #C03028;
+}
+
+.type.poison {
+    background-color: #A040A0;
+}
+
+.type.ground {
+    background-color: #E0C068;
+}
+
+.type.flying {
+    background-color: #A890F0;
+}
+
+.type.psychic {
+    background-color: #F85888;
+}
+
+.type.bug {
+    background-color: #A8B820;
+}
+
+.type.rock {
+    background-color: #B8A038;
+}
+
+.type.ghost {
+    background-color: #705898;
+}
+
+.type.dragon {
+    background-color: #7038F8;
+}
+
+.type.dark {
+    background-color: #705848;
+}
+
+.type.steel {
+    background-color: #B8B8D0;
+}
+
+.type.fairy {
+    background-color: #EE99AC;
+}
+
+
+
+#preloader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff url("../img/furret1.gif") no-repeat center center;
+    background-size: 15%;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+
+/*responsive*/
+@media (max-width: 870px) {
+    .BuscadosFiltro {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        width: 80%;
+    }
+
+    .BuscadosFiltro input {
+        width: 80%;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .BuscadosFiltro select {
+        width: 80%;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    
+
+  
+}
+
+@media (max-width: 480px) {
+    .BuscadosFiltro input,
+    .BuscadosFiltro select {
+        font-size: 12px;
+        padding: 6px;
+        
+    }
+   
+}

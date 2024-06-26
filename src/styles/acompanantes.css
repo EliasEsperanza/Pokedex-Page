@@ -1,0 +1,127 @@
+body {
+    background-image: url("../img/fondo1.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Estilos para el contenedor principal de entrenadores */
+.entrenadores-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilos para la tarjeta de entrenador */
+.entrenador-card {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.entrenador-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Estilos para el contenedor de pokemons */
+.pokemons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+/* Estilos para la tarjeta de pokemon */
+.pokemon-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.pokemon-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 8px;
+}
+
+.pokemon-card:hover img{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+.pokemon-card .pokemon-name {
+    font-weight: bold;
+}
+
+.pokemon-card .card-number {
+    color: #666;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.delete-button {
+    background-color: #f77676;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.delete-button:hover {
+    background-color: #c64a4a;
+}
+
+.delete-entrenador-button{
+    background-color: #9253ff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.delete-entrenador-button:hover {
+    background-color: #6915f9;
+    color: #fff;
+}
+
+.change-name-button{
+    background-color: #5395ff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.change-name-button:hover {
+    background-color: #0e65f2;
+    color: #fff;
+}
