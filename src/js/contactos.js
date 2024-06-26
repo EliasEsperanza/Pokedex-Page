@@ -12,7 +12,7 @@ miHeader.appendChild(miNav);
 const ul = document.createElement('ul');
 
 const items = [
-    { href:'https://eliasesperanza.github.io/Pokedex/', imgSrc: '../styles/imgs/004-juegos-1.png'  },
+    { href:'https://eliasesperanza.github.io/Pokedex-Page/', imgSrc: '../styles/imgs/004-juegos-1.png'  },
     { href: 'pokedex.html', text: 'Pokedex', imgSrc: '../styles/imgs/001-avatar.png' },
     { href: 'indexContactos.html', text: 'Información', imgSrc: '../styles/imgs/017-avatar-9.png' },
     { href: '#', text: 'Juego', imgSrc: '../styles/imgs/022-avatar-13.png' },
