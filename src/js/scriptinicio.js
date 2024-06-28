@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {  href:'https://eliasesperanza.github.io/Pokedex-Page/', imgSrc: 'src/styles/imgs/004-juegos-1.png' },
         { href: 'src/pages/pokedex.html', text: 'Pokedex', imgSrc: 'src/styles/imgs/001-avatar.png' },
         { href: 'src/pages/indexContactos.html', text: 'Información', imgSrc: 'src/styles/imgs/017-avatar-9.png' },
-        { href: '#', text: 'Juego', imgSrc: 'src/styles/imgs/022-avatar-13.png' },
+        { href: 'src/game/index.html', text: 'Juego', imgSrc: 'src/styles/imgs/022-avatar-13.png' },
         { href: 'https://pokemon-project.com/episodios/', target: '_blank', text: 'Anime', imgSrc: 'src/styles/imgs/003-avatar-1.png' }
     ];
 

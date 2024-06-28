@@ -1,0 +1,22 @@
+.imag{
+    
+    height: 99px;
+    width: auto;
+}
+.img2{
+    height: 75px;
+    width: auto;
+}
+.div-padre {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    height: auto;
+    width: 255px;
+    
+}
+.racista{
+    background-color: black;
+    color: white;
+}

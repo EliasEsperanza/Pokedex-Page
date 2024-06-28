@@ -2,14 +2,12 @@
 `Pokemon.js`. Esto permite que el archivo actual utilice las funcionalidades y propiedades definidas
 en la clase `Pokemon` dentro del archivo `Pokemon.js`. */
 import { Pokemon } from "./Pokemon.js";
-/* La línea `importar {Base de datos} de './PokemonDB.js';` está importando la clase `Database` desde
-un archivo llamado `PokemonDB.js`. Esto permite que el archivo actual utilice las funcionalidades y
-propiedades definidas en la clase `Database` dentro del archivo `PokemonDB.js`. */
 import { Database } from './PokemonDB.js';
 
-console.log('Pokedex.js esta en ejecucion');
+console.log('Pokedex.js está en ejecución');
 export class Pokedex {
     constructor() {
+        this.createNavbar();
         this.pokedex = document.createElement('div');
         this.pokedex.classList.add('pokedex');
         document.body.appendChild(this.pokedex);
@@ -17,6 +15,48 @@ export class Pokedex {
         this.pokemons = [];
         this.selectedPokemons = [];
         this.db = new Database('PokemonDB', ['selectedPokemons', 'entrenadores']);
+    }
+
+    /**
+     * La función "createNavbar" crea y agrega un `navbar` al DOM.
+     */
+    createNavbar() {
+        const navbar = document.createElement('nav');
+        navbar.classList.add('navbar');
+
+        const navContainer = document.createElement('div');
+        navContainer.classList.add('nav-container');
+
+        const navLogo = document.createElement('a');
+        navLogo.href = '#';
+        navLogo.classList.add('nav-logo');
+
+        const navMenu = document.createElement('div');
+        navMenu.classList.add('nav-menu');
+
+        const navItem1 = document.createElement('a');
+        navItem1.href = 'https://eliasesperanza.github.io/Pokedex-Page/';
+        navItem1.classList.add('nav-item');
+        navItem1.textContent = 'Inicio';
+
+        const navItem2 = document.createElement('a');
+        navItem2.href = 'acompanantes.html';
+        navItem2.classList.add('nav-item');
+        navItem2.textContent = 'Entrenadores';
+
+        const navItem3 = document.createElement('a');
+        navItem3.href = '#';
+        navItem3.classList.add('nav-item');
+
+        navMenu.appendChild(navItem1);
+        navMenu.appendChild(navItem2);
+        navMenu.appendChild(navItem3);
+
+        navContainer.appendChild(navLogo);
+        navContainer.appendChild(navMenu);
+        navbar.appendChild(navContainer);
+
+        document.body.insertBefore(navbar, document.body.firstChild);
     }
 
     /**
@@ -118,7 +158,6 @@ export class Pokedex {
                 });
 
                 if (entrenador) {
-    
                     const entrenadores = await this.db.getAllData('entrenadores');
                     let entrenadorData = entrenadores.find(e => e.nombre === entrenador);
 
@@ -200,3 +239,4 @@ export class Pokedex {
         });
     }
 }
+

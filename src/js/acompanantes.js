@@ -2,8 +2,48 @@ import { Database } from '../components/PokemonDB.js';
 
 console.log('acompanantes.js está cargando');
 
+function createNavbar() {
+    const navbar = document.createElement('nav');
+    navbar.classList.add('navbar');
+
+    const navContainer = document.createElement('div');
+    navContainer.classList.add('nav-container');
+
+    const navLogo = document.createElement('a');
+    navLogo.href = '#';
+    navLogo.classList.add('nav-logo');
+
+    const navMenu = document.createElement('div');
+    navMenu.classList.add('nav-menu');
+
+    const navItem1 = document.createElement('a');
+    navItem1.href = 'https://eliasesperanza.github.io/Pokedex-Page/';
+    navItem1.classList.add('nav-item');
+    navItem1.textContent = 'Inicio';
+
+    const navItem2 = document.createElement('a');
+    navItem2.href = 'pokedex.html';
+    navItem2.classList.add('nav-item');
+    navItem2.textContent = 'Pokedex';
+
+    const navItem3 = document.createElement('a');
+    navItem3.href = '#';
+    navItem3.classList.add('nav-item');
+
+    navMenu.appendChild(navItem1);
+    navMenu.appendChild(navItem2);
+    navMenu.appendChild(navItem3);
+
+    navContainer.appendChild(navLogo);
+    navContainer.appendChild(navMenu);
+    navbar.appendChild(navContainer);
+
+    document.body.insertBefore(navbar, document.body.firstChild);
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     const db = new Database('PokemonDB', ['entrenadores']);
+    createNavbar();
 
     const entrenadoresContainer = document.createElement('div');
     entrenadoresContainer.classList.add('entrenadores-container');
@@ -129,9 +169,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
             if (nuevoNombre) {
-                entrenador.nombre = nuevoNombre;
+                const nuevoNombreMayusculas = nuevoNombre.toUpperCase();
+                entrenador.nombre = nuevoNombreMayusculas;
                 await db.updateData('entrenadores', entrenador);
-                nombre.textContent = nuevoNombre.toUpperCase();
+                nombre.textContent = nuevoNombreMayusculas;
 
                 Swal.fire({
                     title: '¡Nombre cambiado!',

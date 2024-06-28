@@ -1,0 +1,32 @@
+.divP{
+    display: flex;
+    flex-wrap:nowrap;
+}
+.divB{
+    display: flex;
+    flex-wrap: wrap;
+}
+.imag{
+    height: 99px;
+    width: auto;
+}
+.divMov{
+    max-width: 200px;
+    
+}
+.racista{
+    background-color: black;
+    color: white;
+}
+.div-padre {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    height: auto;
+    width: 255px;
+}
+.Completado{
+    background-color: rgba(72, 255, 0, 0.397);
+    color: black;
+}
