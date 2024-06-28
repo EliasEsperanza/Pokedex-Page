@@ -8,6 +8,46 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.navbar {
+    width: 100%;
+    background-color: #55AD9B;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav-logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-item {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nav-item:hover {
+    background-color: #575757;
+    color: white;
+}
+
 .BuscadosFiltro {
     display: flex;
     justify-content: space-between;
