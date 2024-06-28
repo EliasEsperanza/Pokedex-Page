@@ -4,6 +4,13 @@
 
 document.addEventListener('DOMContentLoaded', async function () {
     localStorage.setItem('MovimientosPokemon', JSON.stringify({}))
+
+    if(JSON.parse(localStorage.getItem('Equipo'))){
+
+    }
+    else{
+        window.location.href = 'index.html';
+    }
     
     const divOrigin = document.createElement('div');
     divOrigin.classList.add('divOrigin');

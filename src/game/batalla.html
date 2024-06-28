@@ -188,7 +188,7 @@
                             console.error('Respuesta del servidor:', error.response.data);
                         }
                     }
-                }, 6000);
+                }, 1000);
             }
 
             async function actualizarResultados() {
@@ -225,6 +225,7 @@
                     }
                 } else {
                     alert(`¡${jugadorId} ha perdido todos sus Pokémon!`);
+                    window.location.href = 'movs.html';
                 }
             }
 
@@ -238,7 +239,7 @@
             }
 
             actualizarResumen();
-            setInterval(verificarVidaPokemon, 6000);
+            setInterval(verificarVidaPokemon, 2000);
         });
     </script>
     <audio autoplay loop>
