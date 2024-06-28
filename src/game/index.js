@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     localStorage.setItem("Equipo", JSON.stringify([]));
 
     //Traer todos lo pokemon estipolado en la variable limiteP
-    const limiteP = 15;
+    const limiteP = 1025;
     for (let index = 1; index <= limiteP; index++) {
         await TraerPokemon(index);
 
