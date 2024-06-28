@@ -1,0 +1,14 @@
+/* Estilos para el contenedor que contiene los elementos */
+.contenedor {
+    display: flex; /* Activa el modelo de caja flexible (Flexbox) */
+    justify-content: space-evenly; /* Distribuye los elementos equitativamente */
+    /* Otros estilos según tus necesidades */
+}
+
+/* Estilos para los elementos dentro del contenedor */
+.contenedor-elemento{
+    display : flex;
+    justify-items : center;
+    align-items: center;
+    height: 100vh;
+}
